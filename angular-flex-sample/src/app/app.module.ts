@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
 import { RouterModule } from '@angular/router';
-import { FlexLayoutModule } from '@angular/flex-layout';
+//import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    FlexLayoutModule,
+    //    FlexLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
