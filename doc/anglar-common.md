@@ -47,7 +47,7 @@ import { appRoutes } from './app.routes';
 
 // Route設定はapp.routes.tsに移動
 @NgModule({
-  declarations: [AppComponent, ExchangeListComponent, PrivateComponent],
+  declarations: [AppComponent],
   imports: [
     // RouterModule
     RouterModule.forRoot(appRoutes)
