@@ -2,10 +2,9 @@
 # Run docker-compose up
 # Live long and prosper
 
-version: '3.1'
+version: '2'
 
 services:
-
   nginx:
     container_name: nginx
     image: nginx
@@ -13,7 +12,7 @@ services:
       context: .
       dockerfile: ./nginx.dockerfile
     volumes:
-      - ./dist:/usr/share/nginx/html
+      - ../../dist:/usr/share/nginx/html
     ports:
-      - "80:80"
+      - "80:8080"
       - "443:443"

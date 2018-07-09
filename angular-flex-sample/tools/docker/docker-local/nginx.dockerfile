@@ -1,6 +1,4 @@
-FROM nginx:alpine
-
-LABEL author="Dan Wahlin"
+FROM nginx:1.11.5
 
 # Copy custom nginx config
 COPY ./.docker/nginx.conf /etc/nginx/nginx.conf
