@@ -3,8 +3,11 @@
 
 
 ### NGINXの設定 
+なおconfigについてはnginx.mdを参照
 公式URL[https://www.nginx.com/resources/wiki/start/topics/tutorials/install/]
 
+
+下記はwsl（ubuntu）での実行例
 ```
 sudo -s
 nginx=stable # use nginx=development for latest development version
@@ -16,7 +19,7 @@ apt-get install nginx
 nginxを自動的に起動する方法
 `sudo update-rc.d nginx defaults`
 
-- nginx.conf
+- nginx.conf(/etc/nginx)  
 一般的には `nginx.conf` に設定はすべて記載する事が可能。しかし、メンテナビリティにかける。  
 そのため、`sites-available` 配下に設定ファイルを置き、`sites-enabled` にシンボリックリンクを貼ることによって外部に分離させる。  
 ※ポートを80に設定していると下記のエラーが出ることがある。そのため別のポート番号に変更することをおすすめ

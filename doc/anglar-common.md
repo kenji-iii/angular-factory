@@ -57,3 +57,30 @@ export class AppModule {
 }
 ```
 これで、app.module.tsはだいぶスッキリする
+
+3. Refresh時に404エラー
+angularではrouterlink以外遷移で404エラーとなる。ただし、`ng serve` する場合はは発生しない。これは内部のweb serverが404エラー時にindex.htmlを見るように設定されているから  
+Nginx側で ` /index.html =404;` を追加する
+
+
+4. 複数のrouter-outletを使用する
+  - nameにルーティングで設定したoutletの値を入れる
+```
+<router-outlet name="navigation"></router-outlet>
+<router-outlet></router-outlet>
+```
+
+
+## http
+
+1 header
+  - content-type
+    - application/x-www-form-urlencoded
+    - multipart/form-data
+      ```
+        $image = $request->image;  // your base64 encoded
+        $image = str_replace('data:image/png;base64,', '', $image);
+        $image = str_replace(' ', '+', $image);
+        $imageName = str_random(10).'.'.'png';
+        \File::put(storage_path(). '/' . $imageName, base64_decode($image));
+      ```
